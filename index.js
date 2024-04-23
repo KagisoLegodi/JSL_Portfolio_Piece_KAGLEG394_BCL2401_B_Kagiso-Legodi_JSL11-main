@@ -1,9 +1,8 @@
 // TASK: import helper functions from utils
-import { helperFunctions } from './utils';
+import { taskFunctions } from './utils';
 
 // TASK: import initialData
 import { initialData } from './initialData';
-
 
 /*************************************************************************************************************************************************
  * FIX BUGS!!!
@@ -21,6 +20,8 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
+  headerBoardName:getElementById("boards-nav-links-div"),
+  columnDivs:getElementById()
 
 }
 
@@ -50,7 +51,7 @@ function displayBoards(boards) {
     const boardElement = document.createElement("button");
     boardElement.textContent = board;
     boardElement.classList.add("board-btn");
-    boardElement.click()  { 
+    boardElement.click = () ==> { 
       elements.headerBoardName.textContent = board;
       filterAndDisplayTasksByBoard(board);
       activeBoard = board //assigns active board
