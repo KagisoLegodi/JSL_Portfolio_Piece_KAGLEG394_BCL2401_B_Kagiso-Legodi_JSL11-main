@@ -103,9 +103,7 @@ function filterAndDisplayTasksByBoard(boardName) {
         const taskElement = document.createElement("div");
         taskElement.classList.add("task-div");
         taskElement.textContent = task.title;
-        taskElement.setAttribute("data-task-id", task.id);
-
-        // Listen for a click event on each task and open a modal
+        taskElement.dataset.taskId = task.id;
         taskElement.addEventListener("click", () => {
           openEditTaskModal(task);
         });
