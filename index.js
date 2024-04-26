@@ -135,15 +135,6 @@ function addTaskToUI(task) {
     `.column-div[data-status="${task.status}"]`
   );
   const tasksContainer = column.querySelector(".tasks-container");
-  if (!tasksContainer) {
-    console.warn(
-      `Tasks container not found for status: ${task.status}, creating one.`
-    );
-    tasksContainer = document.createElement("div");
-    tasksContainer.className = "tasks-container";
-    column.appendChild(tasksContainer);
-  }
-
   const taskElement = document.createElement("div");
   taskElement.className = "task-div"; // change class name OR task-div
   taskElement.textContent = task.title; // Modify as needed
