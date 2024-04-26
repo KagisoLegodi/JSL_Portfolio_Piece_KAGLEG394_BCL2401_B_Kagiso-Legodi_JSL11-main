@@ -261,7 +261,7 @@ function openEditTaskModal(task) {
     toggleModal(false, elements.editTaskModal);
   });
 
-  toggleModal(true, elements.editTaskModal); // Show the edit task modal
+  toggleModal(true, elements.editTaskModal);
 }
 
 function saveTaskChanges(taskId) {
