@@ -65,8 +65,7 @@ function fetchAndDisplayBoardsAndTasks() {
   }
 }
 
-// Creates different boards in the DOM
-// TASK: Fix Bugs
+// Display boards
 function displayBoards(boards) {
   const boardsContainer = document.querySelector("#boards-nav-links-div");
   boardsContainer.innerHTML = "";
@@ -75,7 +74,6 @@ function displayBoards(boards) {
     boardElement.textContent = board;
     boardElement.classList.add("board-btn");
     boardElement.addEventListener("click", () => {
-      // replace click() with eventListener
       elements.headerBoardName.textContent = board;
       filterAndDisplayTasksByBoard(board);
       activeBoard = board;
