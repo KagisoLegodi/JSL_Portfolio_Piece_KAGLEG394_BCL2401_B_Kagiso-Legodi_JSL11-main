@@ -9,15 +9,10 @@ import {
 
 import { initialData } from "./initialData.js";
 
-/*************************************************************************************************************************************************
- * FIX BUGS!!!
- * **********************************************************************************************************************************************/
-
-// Function checks if local storage already has data, if not it loads initialData to localStorage
-function initializeData() {
-  if (!localStorage.getItem("tasks")) {
-    localStorage.setItem("tasks", JSON.stringify(initialData));
-    localStorage.setItem("showSideBar", "true");
+// Initialize data if local storage is empty
+if (!localStorage.getItem("tasks")) {
+  localStorage.setItem("tasks", JSON.stringify(initialData));
+  localStorage.setItem("showSideBar", "true");
   } else {
     console.log("Data already exists in localStorage");
   }
