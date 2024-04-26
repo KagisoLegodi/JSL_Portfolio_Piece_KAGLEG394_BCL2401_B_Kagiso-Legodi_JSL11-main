@@ -215,7 +215,7 @@ function addTask(event) {
   if (newTask) {
     addTaskToUI(newTask);
     toggleModal(false);
-    elements.filterDiv.style.display = "none"; // Also hide the filter overlay
+    elements.filterDiv.style.display = "none";
     event.target.reset();
     refreshTasksUI();
   }
