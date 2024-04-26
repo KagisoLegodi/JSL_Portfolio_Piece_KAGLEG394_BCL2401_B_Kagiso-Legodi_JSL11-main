@@ -231,12 +231,11 @@ function toggleSidebar(show) {
 function toggleTheme() {
   const isLightTheme = elements.themeSwitch.checked;
   if (isLightTheme) {
-    localStorage.setItem("light-theme", "enabled"); // set to light mode
+    localStorage.setItem("light-theme", "enabled");
   } else {
-    localStorage.setItem("light-theme", "disabled"); // set back to default
+    localStorage.setItem("light-theme", "disabled");
   }
-
-  document.body.classList.toggle("light-theme", isLightTheme); //Toggle the 'light-theme' class
+  document.body.classList.toggle("light-theme", isLightTheme);
 }
 
 function openEditTaskModal(task) {
