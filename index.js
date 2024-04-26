@@ -34,9 +34,24 @@ const elements = {
 
 let activeBoard = "";
 
-// Extracts unique board names from tasks
-// TASK: FIX BUGS
+// Define column titles
+const colTitles = {
+  todo: "Todo",
+  doing: "Doing",
+  done: "Done",
+};
 
+// Initialize data and display boards and tasks
+function initializeData() {
+  if (!localStorage.getItem("tasks")) {
+    localStorage.setItem("tasks", JSON.stringify(initialData));
+    localStorage.setItem("showSideBar", "true");
+  }
+  fetchAndDisplayBoardsAndTasks();
+}
+initializeData();
+
+// Fetch and display boards and tasks
 function fetchAndDisplayBoardsAndTasks() {
   const tasks = getTasks();
   const boards = [...new Set(tasks.map((task) => task.board).filter(Boolean))];
