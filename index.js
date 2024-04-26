@@ -156,7 +156,7 @@ function setupEventListeners() {
   const cancelAddTaskBtn = document.getElementById("cancel-add-task-btn");
   cancelAddTaskBtn.addEventListener("click", () => {
     toggleModal(false);
-    elements.filterDiv.style.display = "none"; // Also hide the filter overlay
+    elements.filterDiv.style.display = "none";
   });
 
   // Clicking outside the modal to close it
