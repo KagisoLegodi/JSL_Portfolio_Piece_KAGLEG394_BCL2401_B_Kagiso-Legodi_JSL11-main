@@ -68,8 +68,8 @@ function fetchAndDisplayBoardsAndTasks() {
 // Creates different boards in the DOM
 // TASK: Fix Bugs
 function displayBoards(boards) {
-  const boardsContainer = document.querySelector("#boards-nav-links-div"); // change id to 'container'
-  boardsContainer.innerHTML = ""; // Clears the container ***
+  const boardsContainer = document.querySelector("#boards-nav-links-div");
+  boardsContainer.innerHTML = "";
   boards.forEach((board) => {
     const boardElement = document.createElement("button");
     boardElement.textContent = board;
