@@ -136,10 +136,12 @@ function addTaskToUI(task) {
   );
   const tasksContainer = column.querySelector(".tasks-container");
   const taskElement = document.createElement("div");
-  taskElement.className = "task-div"; // change class name OR task-div
-  taskElement.textContent = task.title; // Modify as needed
-  taskElement.setAttribute("data-task-id", task.id);
-
+  taskElement.classList.add("task-div");
+  taskElement.textContent = task.title;
+  taskElement.dataset.taskId = task.id;
+  taskElement.addEventListener("click", () => {
+    openEditTaskModal(task);
+  });
   tasksContainer.appendChild(taskElement);
 }
 
